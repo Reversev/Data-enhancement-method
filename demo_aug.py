@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Time : 2021/6/6 14:51
 # @Author : 'IReverser'
@@ -17,11 +17,11 @@ def select_aug(img, str):
     if str == '1':
         im = A.RGBShift(r_shift_limit=133, g_shift_limit=120, b_shift_limit=26, p=0.56)(image=image)['image']
     elif str == '2':
-        im = A.RandomBrightness(limit=0.3, p=0.88)(image=image)['image']  # 减小亮度
+        im = A.RandomBrightness(limit=0.3, p=0.88)(image=image)['image']  # reduce Brightness randomly
     elif str == '3':
-        im = A.RandomBrightness(limit=1.2, p=0.6)(image=image)['image']    # 减小亮度
+        im = A.RandomBrightness(limit=1.2, p=0.6)(image=image)['image']    # reduce Brightness randomly
     elif str == '4':
-        im = A.RandomGamma(gamma_limit=20, p=0.3)(image=image)['image']   # 伽马变换
+        im = A.RandomGamma(gamma_limit=20, p=0.3)(image=image)['image']   # Gamma transformation randomly
     elif str == '5':
         im = A.HueSaturationValue(p=0.3)(image=image)['image']
     elif str == '6':
