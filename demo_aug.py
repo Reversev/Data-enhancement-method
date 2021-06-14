@@ -12,7 +12,7 @@ import os
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
 
-def select_aug(img, str):
+def select_aug(image, str):
     im = image
     if str == '1':
         im = A.RGBShift(r_shift_limit=133, g_shift_limit=120, b_shift_limit=26, p=0.56)(image=image)['image']
